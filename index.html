@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Cargat React -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>ReactApp</title>
 </head>
+
 <body>
-    
+    <!-- Div donde se va a insertar el HTML del JSX -->
+    <div id="root"></div>
+
+    <script type="text/babel">
+        //Variable con un nombre
+        const nombre = 'Juan';
+        //Elemento HTML que va a insertar el nombre
+        const h1Tag = <h1>Hola {nombre} </h1>;
+        //Referencia del elemento en donde se va a insertar
+        const divRoot = document.querySelector('#root');
+        //Se inserta el código HTML de h1Tag en el elemento divRoot
+        ReactDOM.render(h1Tag, divRoot);
+    </script>
 </body>
+
 </html>
